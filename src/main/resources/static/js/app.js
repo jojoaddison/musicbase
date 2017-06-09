@@ -1,4 +1,4 @@
-angular.module('SpringMusic', ['albums', 'errors', 'status', 'info', 'ngRoute', 'ui.directives']).
+angular.module('SpringMusic', ['albums', 'errors', 'status', 'info', 'service', 'ngRoute', 'ui.directives']).
     config(function ($locationProvider, $routeProvider) {
         // $locationProvider.html5Mode(true);
 

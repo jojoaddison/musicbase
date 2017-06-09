@@ -1,5 +1,21 @@
 
 ---
+ssoServiceUrl: https://uaa.local.pcfdev.io
 spring:
   jpa:
     generate-ddl: true
+security:
+  ignored: /favicon.ico, /webjars/**, /css/**
+  basic:
+    enabled: false
+  oauth2:
+    client:
+      client-id: musicbase
+      client-secret: musicbaseone
+      access-token-uri: ${ssoServiceUrl}/oauth/token
+      user-authorization-uri: ${ssoServiceUrl}/oauth/authorize
+    resource:
+      token-info-uri: ${ssoServiceUrl}/check_token
+      jwt:
+        key-uri: ${ssoServiceUrl}/token_key
+      user-info-uri: ${ssoServiceUrl}/userinfo

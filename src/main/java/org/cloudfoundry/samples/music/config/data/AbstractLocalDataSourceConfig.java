@@ -1,8 +1,8 @@
 package org.cloudfoundry.samples.music.config.data;
 
-import org.apache.commons.dbcp.BasicDataSource;
-
 import javax.sql.DataSource;
+
+import org.apache.commons.dbcp.BasicDataSource;
 
 public class AbstractLocalDataSourceConfig {
 
